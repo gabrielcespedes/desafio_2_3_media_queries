@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-size: 20px;
+}
+
+.nav {
+    background-color: #25a59a;
+    color: white;
+    padding: 15px 10px 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    grid-area: n;
+}
+
+.opciones {
+    display: none;
+}
+
+.opciones p {
+    margin-bottom: 10px;
+}
+
+.icono {
+    display: flex;
+}
+
+.logo {
+    margin-left: 5px;
+}
+
+.menu {
+    text-align: end;
+    justify-content: space-between;
+}
+
+.orden {
+    background-color: lightgrey;
+    text-align: center;
+    padding: 15px 15px;
+    grid-area: o;
+}
+
+select {
+    width: 300px;
+    height: 30px;
+    font-size: 15px;
+}
+
+
+.productos {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-area: p;
+}
+
+img {
+    width: 100%;
+}
+
+.card {
+    border: 1px solid lightgray;
+    border-radius: 2%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 20px;
+    padding-bottom: 10px;
+    
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #25a59a;
+    color: white;
+    font-size: 15px;
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 10%;
+    margin-top: 5px;
+}
+
+.paginador {
+    grid-area: pag;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 15px;
+}
+
+.paginador button {
+    background-color: white;
+    color: #25a59a;
+    border: 1px solid #25a59a;
+    width: 50px;
+    border-radius: 2px;
+}
+
+.footer {
+    background-color: #00756c;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    grid-area: f;
+}
+
+@media (min-width: 992px) {
+
+    body {
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+        'n o o o'
+        'n p p p'
+        'n p p p'
+        'f p p p'
+        'f pag pag pag';        
+    }
+
+    img {
+        width: 85%;
+    }
+
+    
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .opciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    select {
+        width: 70%;
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px 10px 5px 10px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and  (max-width: 992px){
+
+    body {
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+        'n o o o'
+        'n p p p'
+        'n p p p'
+        'f p p p'
+        'f pag pag pag';        
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .opciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+    
